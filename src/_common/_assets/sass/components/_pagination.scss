@@ -1,0 +1,94 @@
+//
+// Pagination
+//
+
+.pagination {
+	flex:1;
+	display:flex;
+	justify-content: center;
+
+	.page-link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: $transition-link;
+
+		&.active,
+		&:hover,
+		&:focus {
+			.page-link{
+				transition: $transition-link;
+			}
+		}
+	}
+	li.active{
+		a{
+			border-radius: 100px;
+			background-color: #80C247;
+			font-weight: 600;
+			color: #fff;
+			border: none;
+			&:hover{
+				background-color: #80C247;
+				color: #fff;
+			}
+		
+		}
+		
+		
+	}
+	li{
+		position: relative;
+		
+		a{
+			border: 1px solid #707070;
+			border-radius:100px;
+			margin: 0 5px;
+			font-family: 'Poppins-Regular';
+			font-weight: 600;
+		}
+		&:last-child{
+			a{
+				&:hover{
+					background-color:#fff;
+				}
+			}
+		}
+		&:nth-child(2){
+			a{
+				width: 32px;
+				height: 32px;
+				align-items: center;
+				display: flex;
+				justify-content: center;
+			}
+		}
+	}
+	.glyphicon-menu-left{
+		&::before{
+			position: absolute;
+			left: -8px;
+			top: 9px;
+		}
+	}
+		.glyphicon-menu-right{
+			&::before{
+				position: absolute;
+				right: -8px;
+				top: 9px;
+			}
+	}
+
+	.previous, .next{
+		a{
+			color: #000;
+			font-weight: 600;
+			background-color: #fff;
+			
+			&:hover{
+				background-color: #fff;
+				color: #000;
+			}
+		}
+	}
+}

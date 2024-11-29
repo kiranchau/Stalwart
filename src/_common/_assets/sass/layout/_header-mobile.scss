@@ -1,0 +1,185 @@
+//
+// Header Mobile
+//
+
+// Desktop Mode
+@include media-breakpoint-up(lg) {
+	.header-mobile {
+		display: none;
+	}
+}
+@include media-breakpoint-down(sm) {
+body .topbar {
+	.topbar-search{
+		display: none;
+	}
+}
+@media screen and (min-width: 411px) {
+
+	.table {
+		margin-top: 2rem !important;
+	}
+
+  }
+  @media screen and (min-width: 360px) {
+
+	.table {
+		margin-top: 2rem !important;
+	}
+
+  }
+
+.subheader-mobile {
+    display: block !important;
+    width: calc(100% - 30px);
+    float: left;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 30px 0px rgb(82 63 105 / 5%);
+    border: 0;
+    background: #fff !important;
+    margin: 0 15px;
+	.topbar-search{
+		display: block !important;
+		width: 100% !important;
+		div#kt_quick_search_toggle{
+			margin-top: 0 !important;
+		}
+		.select-study-drop{
+			margin-top: 0 !important;
+		}
+	}
+	.topbar-info{
+		display: none !important;
+	}
+}
+body .subheader-mobile .topbar {
+    position: relative !important;
+    width: 100%;
+    float: left;
+    right: 0;
+	padding: 0 !important;
+}
+body div#kt_header_mobile a {
+    width: 40% !important;
+	img{
+		width: 80% !important;
+	}
+}
+}
+// Tablet & Mobile Modes
+@include media-breakpoint-down(md) {
+	.dash-noti-content .noti-content-inner .content-date {
+		width: 100% !important;
+		p{
+			margin: 5px 0 !important;
+		}
+		&:before, &:after{
+			display: none !important;
+		}
+	}
+	.dash-noti-content .noti-content-inner .content-detail{
+		width: 100% !important;
+	}
+	.info-popup.uplaod-profile .middle-content .site-info .dite-info-left, 
+	.info-popup.uplaod-profile .middle-content .site-info-title .dite-info-left {
+		width: 100% !important;
+		margin: 0 !important;
+	}
+	
+	.header-mobile-fixed .topbar {
+		z-index: 111 !important;
+		width: 74%;
+		background: transparent !important;
+		height: auto;
+		left: auto;
+		margin-top: 0 !important;
+		box-shadow: none !important;
+		border-top: 0 !important;
+		display: block;
+	}
+
+	.topbar-search {
+		width: calc(100% - 135px) !important;
+	}
+	.topbar #kt_quick_search_toggle .topbar-item .btn-dropdown, .select-dropdown .MuiInputBase-root select, .select-dropdown .MuiInputBase-root .my-document .uplaod-btn, .my-document .select-dropdown .MuiInputBase-root .uplaod-btn {
+		font-size: 13px !important;
+	}
+	body .topbar #kt_quick_search_toggle, body .select-dropdown {
+		// margin-top: 7.5px !important;
+		height: 40px !important;
+	}
+	div[data-tut=my_profile] .topbar-item span.text-muted, div[data-tut=my_profile] .topbar-item span.font-weight-bolder {
+		display: none !important;
+	}
+	
+div[data-tut=my_profile] {
+    width: 45px !important;
+}
+div#kt_header_mobile a {
+    float: left;
+    height: 55px;
+}
+.logomob {
+    width: 30% !important;
+}
+	.top-info {
+		margin-top: 17px !important;
+		margin-right: 5px !important;
+	}
+	body .header-user .symbol-label{
+		margin-right: 0 !important;
+	}
+	.select-dropdown .MuiInputBase-root{
+		padding: 7px 15px !important;
+	}
+	body .topbar #kt_quick_search_toggle .topbar-item .btn-dropdown{
+		padding: 10px 10px 7px 15px !important;
+	}
+	div[data-tut=My_top_notification] {
+		margin-top: 4px !important;
+	}
+	.header-mobile {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 get($page-padding, tablet-and-mobile);
+		height: get($header-config, tablet-and-mobile, default, height);
+		min-height: get($header-config, tablet-and-mobile, default, height);
+		position: relative;
+		z-index: 3;
+
+		// Fixed Mobile Header Mode
+		.header-mobile-fixed & {
+			position: fixed;
+			top: 0;
+			right: 0;
+			left: 0;
+			z-index: get($header-config, tablet-and-mobile, fixed, zindex);
+			height: get($header-config, tablet-and-mobile, fixed, height);
+			min-height: get($header-config, tablet-and-mobile, fixed, height);
+		}
+
+		// Topbar Shown Mode
+		.topbar-mobile-on & {
+			box-shadow: none !important;
+		}
+		img[alt="logo"]{
+			width: 65%;
+		}
+	}
+	.brand-dark .header-mobile{
+		background-color: $white!important;
+	}
+
+}
+// @include media-breakpoint-down(md) {
+// 	.splash-right {
+// 	  width: 35% !important;
+// 	  max-width: inherit !important;
+//   }
+//   .splash-left {
+// 	width: 50% !important;
+//   }
+//   }
+

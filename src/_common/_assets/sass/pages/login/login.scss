@@ -1,0 +1,122 @@
+
+@import "../../init";
+
+.login-wrapper {
+    background: #80C247 !important;
+    width: 100%;
+    position: relative;
+    float: left;
+    min-height: 100vh;
+    overflow-y: hidden;
+    &:before{
+        content: '';
+        background-image: url('/media/bg/bg-login.jpg');
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        float: left;
+        background-repeat: no-repeat;
+        opacity: 0.1;
+        background-size: 110%;
+        background-position: 0 50%;
+    }
+    .login-signin-on {
+        background: #fff !important;
+        width: 482px;
+        margin: 0 auto;
+        border-radius: 12px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        .login-left{
+            padding: 40px 30px !important;
+            .login-left-top {
+                display: block !important;
+                width: 100%;
+                float: left;
+                margin: 0 !important;
+                div#kt_login_signin_form p{
+                    margin: 0;
+                }
+                div#kt_login_signin_form h1 {
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: #80C247;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    .login-form {
+        float: left;
+        width: 100%;
+        label {
+            font-size: 14px;
+            color: #000;
+            margin-bottom: 5px;
+        }
+        input {
+            height: 40px !important;
+            border: 1px solid #AAAAAA !important;
+            background: transparent !important;
+            font-size: 14px;
+            color: #000;
+            font-weight: 100;
+        }
+        .fv-plugins-icon-container {
+            margin-bottom: 20px;
+        }
+        .login-button {
+            display: block !important;
+            width: 100%;
+            float: left;
+            margin: 0;
+        }
+        button#kt_login_signin_submit {
+            width: 48%;
+            margin: 0 4% 0 0 !important;
+            background: #80C247;
+            border: 1px solid #80C247;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .close-btn {
+            width: 48%;
+            margin: 0 !important;
+            background: transparent !important;
+            border: 1px solid #80C247;
+            font-size: 14px;
+            font-weight: 600;
+            color: #80C247 !important;
+        }
+    }
+}
+@include media-breakpoint-down(xs){
+    .login-wrapper{
+        .login-signin-on{
+            width:94%;
+        }
+    }
+}
+.alert-icon {
+    float: left;
+    max-width: 50px;
+}
+.alert-text {
+    width: calc(100% - 80px);
+    float: left;
+}
+.alert-close {
+    width: 30px;
+    float: left;
+    padding-top: 10px !important;
+}
+.alert-custom {
+    width: 100%;
+    float: left;
+    margin-bottom: 10px !important;
+}

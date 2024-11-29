@@ -1,0 +1,78 @@
+//
+// Content
+//
+
+// Desktop Mode
+.footer, .aside-minimize.aside-minimize-hover .footer {
+padding: 13px 0 !important;
+position: fixed;
+    bottom: 0;
+    width: calc(100% - 265px);
+    left: 265px;
+}
+.aside-minimize .footer {
+    left: 0 !important;
+    width: 100% !important;
+}
+@include media-breakpoint-up(lg) {
+	.footer {
+		// Fixed Mode
+		background: #fff !important;
+    padding: 13px 0 !important;
+		.footer-fixed & {
+			position: fixed;
+			height: get($footer-config, fixed, height);
+			z-index: get($footer-config, fixed, zindex);
+			box-shadow: get($footer-config, fixed, shadow);
+			bottom: 0;
+			right: 0;
+			left: 0;
+		}
+		span{
+			display: block;
+			text-align: center;
+			color: #fff !important;
+			font-size: 13px !important;
+			font-weight: 100 !important;
+		}
+
+		// Aside Enabled & Fixed Footer Modes
+		.aside-enabled.footer-fixed & {
+			left: get($aside-config, base, width);
+		}
+
+		// Aside Enabled, Aside Minimized, Aside Minimize Hover & Fixed Footer Modes
+		.aside-enabled.aside-minimize.footer-fixed & {
+			left: get($aside-config, base, minimized-width);
+		}
+	}
+}
+// @include media-breakpoint-up(md){
+// 	.footer{
+// 		position: inherit;
+// 		width: 100%;
+// 		text-align: center;
+// 		span{
+// 			color: #fff !important;
+// 		}
+
+// 	}
+// }
+@media (max-width: 1091px) {
+	.footer{
+		position: fixed;
+		width: 100%!important;
+		text-align: center;
+		left: 0;
+		span{
+		color: #fff !important;
+		}
+
+	}
+}
+@include media-breakpoint-down(xs) {
+	.footer{
+		position: inherit;
+	}
+
+}
